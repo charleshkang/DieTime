@@ -26,14 +26,15 @@ class LifeExpectancyService
         guard let url = NSURL(string: urlString) else { return }
         let session = NSURLSession.sharedSession()
         let task = session.dataTaskWithURL(url) { (data: NSData?, response: NSURLResponse?, error: NSError?) -> Void in
-//            let request = NSMutableURLRequest(URL: url)
-//            request.setValue("jY0bEhHCBpmsh8j1mpA5p11tCJGyp1tok3Zjsn4ubbvNNp5Jt3", forHTTPHeaderField: "X-Mashape-Key")
-//            NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler: ???)
             guard let data = data else { return }
             let json = JSON(data: data)
-            let currentAge = json["data"]["currentAge"].string
-            print(currentAge)
+            let currentAge = json["data"]["currentAge"].float
+            let yearsLeft = json["data"]["yearsLeft"].float
+            let monthsLeft = json["data"]["monthsLeft"].float
+            let daysLeft = json["data"]["daysLeft"].float
+            let lifeComplete = json["data"]["lifeComplete"].float
         }
+        task.resume()
     }
 
 
