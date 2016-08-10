@@ -7,15 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		40D8263FC20F58B630119F7A /* Pods_DieTime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E99AE4485A1DCBABCFCB01D9 /* Pods_DieTime.framework */; };
 		BFECD9991D5BA3900065B7FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFECD9981D5BA3900065B7FD /* AppDelegate.swift */; };
 		BFECD99E1D5BA3900065B7FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFECD99C1D5BA3900065B7FD /* Main.storyboard */; };
 		BFECD9A01D5BA3900065B7FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFECD99F1D5BA3900065B7FD /* Assets.xcassets */; };
 		BFECD9A31D5BA3900065B7FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFECD9A11D5BA3900065B7FD /* LaunchScreen.storyboard */; };
 		BFECD9AC1D5BABC30065B7FD /* TimeLeftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFECD9AB1D5BABC30065B7FD /* TimeLeftViewController.swift */; };
 		BFECD9AE1D5BB36F0065B7FD /* TimeLeftDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFECD9AD1D5BB36F0065B7FD /* TimeLeftDetailViewController.swift */; };
+		BFECD9B01D5BBA9E0065B7FD /* LifeExpectancy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFECD9AF1D5BBA9E0065B7FD /* LifeExpectancy.swift */; };
+		BFECD9B21D5BBB890065B7FD /* LifeExpectancyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFECD9B11D5BBB890065B7FD /* LifeExpectancyService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		ACB563B1DBC4FD4DB9AEA67A /* Pods-DieTime.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DieTime.release.xcconfig"; path = "Pods/Target Support Files/Pods-DieTime/Pods-DieTime.release.xcconfig"; sourceTree = "<group>"; };
+		B1153333B59239403DF8301F /* Pods-DieTime.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DieTime.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DieTime/Pods-DieTime.debug.xcconfig"; sourceTree = "<group>"; };
 		BFECD9951D5BA38F0065B7FD /* DieTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DieTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFECD9981D5BA3900065B7FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFECD99D1D5BA3900065B7FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -24,6 +29,9 @@
 		BFECD9A41D5BA3900065B7FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFECD9AB1D5BABC30065B7FD /* TimeLeftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeLeftViewController.swift; sourceTree = "<group>"; };
 		BFECD9AD1D5BB36F0065B7FD /* TimeLeftDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeLeftDetailViewController.swift; sourceTree = "<group>"; };
+		BFECD9AF1D5BBA9E0065B7FD /* LifeExpectancy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LifeExpectancy.swift; sourceTree = "<group>"; };
+		BFECD9B11D5BBB890065B7FD /* LifeExpectancyService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LifeExpectancyService.swift; sourceTree = "<group>"; };
+		E99AE4485A1DCBABCFCB01D9 /* Pods_DieTime.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DieTime.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +39,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40D8263FC20F58B630119F7A /* Pods_DieTime.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		75E25A85D834AEC338F853E8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E99AE4485A1DCBABCFCB01D9 /* Pods_DieTime.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BFECD98C1D5BA38F0065B7FD = {
 			isa = PBXGroup;
 			children = (
 				BFECD9971D5BA3900065B7FD /* DieTime */,
 				BFECD9961D5BA38F0065B7FD /* Products */,
+				F172AE77CB74A32880D012AB /* Pods */,
+				75E25A85D834AEC338F853E8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,8 +76,8 @@
 			isa = PBXGroup;
 			children = (
 				BFECD99C1D5BA3900065B7FD /* Main.storyboard */,
-				BFECD9AB1D5BABC30065B7FD /* TimeLeftViewController.swift */,
-				BFECD9AD1D5BB36F0065B7FD /* TimeLeftDetailViewController.swift */,
+				BFECD9B41D5BBCAC0065B7FD /* Model */,
+				BFECD9B31D5BBCA40065B7FD /* Controller */,
 				BFECD9AA1D5BA8ED0065B7FD /* Supporting Files */,
 			);
 			path = DieTime;
@@ -75,6 +94,33 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		BFECD9B31D5BBCA40065B7FD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BFECD9AB1D5BABC30065B7FD /* TimeLeftViewController.swift */,
+				BFECD9AD1D5BB36F0065B7FD /* TimeLeftDetailViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		BFECD9B41D5BBCAC0065B7FD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BFECD9AF1D5BBA9E0065B7FD /* LifeExpectancy.swift */,
+				BFECD9B11D5BBB890065B7FD /* LifeExpectancyService.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		F172AE77CB74A32880D012AB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B1153333B59239403DF8301F /* Pods-DieTime.debug.xcconfig */,
+				ACB563B1DBC4FD4DB9AEA67A /* Pods-DieTime.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -82,9 +128,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BFECD9A71D5BA3900065B7FD /* Build configuration list for PBXNativeTarget "DieTime" */;
 			buildPhases = (
+				53840F6E59361916672BB11F /* [CP] Check Pods Manifest.lock */,
 				BFECD9911D5BA38F0065B7FD /* Sources */,
 				BFECD9921D5BA38F0065B7FD /* Frameworks */,
 				BFECD9931D5BA38F0065B7FD /* Resources */,
+				0B1893E1B11C720CF267399C /* [CP] Embed Pods Frameworks */,
+				064FE3EC29F79A8D7FBB76F9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -141,14 +190,64 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		064FE3EC29F79A8D7FBB76F9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DieTime/Pods-DieTime-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0B1893E1B11C720CF267399C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DieTime/Pods-DieTime-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		53840F6E59361916672BB11F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BFECD9911D5BA38F0065B7FD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				BFECD9AC1D5BABC30065B7FD /* TimeLeftViewController.swift in Sources */,
+				BFECD9B01D5BBA9E0065B7FD /* LifeExpectancy.swift in Sources */,
 				BFECD9991D5BA3900065B7FD /* AppDelegate.swift in Sources */,
 				BFECD9AE1D5BB36F0065B7FD /* TimeLeftDetailViewController.swift in Sources */,
+				BFECD9B21D5BBB890065B7FD /* LifeExpectancyService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +358,7 @@
 		};
 		BFECD9A81D5BA3900065B7FD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B1153333B59239403DF8301F /* Pods-DieTime.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = DieTime/Info.plist;
@@ -270,6 +370,7 @@
 		};
 		BFECD9A91D5BA3900065B7FD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ACB563B1DBC4FD4DB9AEA67A /* Pods-DieTime.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = DieTime/Info.plist;
@@ -298,6 +399,7 @@
 				BFECD9A91D5BA3900065B7FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

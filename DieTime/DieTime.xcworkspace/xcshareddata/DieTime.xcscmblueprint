@@ -1,0 +1,37 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "A1C1FC0F792AEFEEEFE07E7CA1BFBD86240D27D6",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "023C046D7BC226924BBAD83456E847BF59264631" : 0,
+    "1A05AC0759FC290F56862DE02CD56389F41CC7CE" : 0,
+    "A1C1FC0F792AEFEEEFE07E7CA1BFBD86240D27D6" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "8EF296FB-38E6-47BC-B31B-D10C8566AC2A",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "023C046D7BC226924BBAD83456E847BF59264631" : "..",
+    "1A05AC0759FC290F56862DE02CD56389F41CC7CE" : "",
+    "A1C1FC0F792AEFEEEFE07E7CA1BFBD86240D27D6" : "DieTime\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "DieTime",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "DieTime\/DieTime.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/charleshkang\/unit-2-final-project-.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "023C046D7BC226924BBAD83456E847BF59264631"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/charleshkang\/Alarmify-iOS.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "1A05AC0759FC290F56862DE02CD56389F41CC7CE"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/charleshkang\/DieTime.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "A1C1FC0F792AEFEEEFE07E7CA1BFBD86240D27D6"
+    }
+  ]
+}

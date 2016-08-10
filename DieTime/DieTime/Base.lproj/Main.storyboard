@@ -48,21 +48,28 @@
                                         <date key="date" timeIntervalSinceReferenceDate="492547293.59614003">
                                             <!--2016-08-10 18:41:33 +0000-->
                                         </date>
+                                        <connections>
+                                            <action selector="datePickerChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="0rI-M1-BFq"/>
+                                        </connections>
                                     </datePicker>
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="6TS-0J-B4F">
                                 <rect key="frame" x="0.0" y="304" width="600" height="240"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gender" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EO3-BK-eY7">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Gender" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EO3-BK-eY7">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="24"/>
                                         <color key="backgroundColor" red="0.36666108804664699" green="0.51824904554449702" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nVg-Dw-cDc">
+                                    <pickerView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nVg-Dw-cDc">
                                         <rect key="frame" x="0.0" y="24" width="600" height="216"/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="BYZ-38-t0r" id="68v-Kz-DEm"/>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="wFe-8m-eQU"/>
+                                        </connections>
                                     </pickerView>
                                 </subviews>
                             </stackView>
@@ -77,6 +84,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="showDeathTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rq5-6D-4Kz"/>
                                     <segue destination="5Ge-UI-PWt" kind="show" id="UYN-xi-RS5"/>
                                 </connections>
                             </button>
@@ -101,15 +109,19 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Your Info" id="tTa-Ut-mkx"/>
+                    <connections>
+                        <outlet property="agePicker" destination="nVg-Dw-cDc" id="PwJ-X0-X1O"/>
+                        <outlet property="datePicker" destination="LyG-va-4HK" id="W2o-vI-pJP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="283" y="302"/>
         </scene>
-        <!--View Controller-->
+        <!--Time Left Detail View Controller-->
         <scene sceneID="Yc0-4v-mL7">
             <objects>
-                <viewController id="5Ge-UI-PWt" sceneMemberID="viewController">
+                <viewController id="5Ge-UI-PWt" customClass="TimeLeftDetailViewController" customModule="DieTime" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="oeP-kB-WIs"/>
                         <viewControllerLayoutGuide type="bottom" id="3jw-kN-Y90"/>
@@ -175,6 +187,13 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="ageLabel" destination="Zkk-JE-5EF" id="4vt-8K-8G1"/>
+                        <outlet property="daysLeftLabel" destination="H94-f0-3zD" id="OYd-AI-eee"/>
+                        <outlet property="lifeCompleteLabel" destination="Okx-X1-ea9" id="9uE-ZP-wLs"/>
+                        <outlet property="monthsLeftLabel" destination="55C-rv-3rn" id="gHm-h3-bW5"/>
+                        <outlet property="yearsLeftLabel" destination="rJK-4e-q1f" id="PsH-O4-gVw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qO6-tl-8Rm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

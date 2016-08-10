@@ -8,6 +8,12 @@
 
 import UIKit
 
-class TimeLeftDetailViewController: UIViewController {
+class TimeLeftDetailViewController: UIViewController
+{
 
+    @IBOutlet weak var ageLabel: UILabel!
+    @IBOutlet weak var yearsLeftLabel: UILabel!
+    @IBOutlet weak var monthsLeftLabel: UILabel!
+    @IBOutlet weak var daysLeftLabel: UILabel!
+    @IBOutlet weak var lifeCompleteLabel: UILabel!
 }

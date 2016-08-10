@@ -1,0 +1,6 @@
+framework module Pods_DieTime {
+  umbrella header "Pods-DieTime-umbrella.h"
+
+  export *
+  module * { export * }
+}
