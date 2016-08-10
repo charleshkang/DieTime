@@ -21,6 +21,7 @@ class TimeLeftViewController: UIViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        lifeExpectancy.getLifeInfo()
     }
 
     @IBAction func showDeathTouchUpInside(sender: AnyObject)

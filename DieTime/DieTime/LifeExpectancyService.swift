@@ -17,26 +17,34 @@ protocol LifeExpectancyServiceDelegate: class
 class LifeExpectancyService
 {
     weak var delegate: LifeExpectancyServiceDelegate?
-}
-
+    
+    
     func getLifeInfo()
     {
-//        let urlString = "https://life-left.p.mashape.com/time-left?birth=\(day)+\(month)+\(year)&gender=male"
+        let configuration = NSURLSessionConfiguration.defaultSessionConfiguration()
+        configuration.HTTPAdditionalHeaders = [
+            "X-Mashape-Key" : "jY0bEhHCBpmsh8j1mpA5p11tCJGyp1tok3Zjsn4ubbvNNp5Jt3"
+        ]
+        let session = NSURLSession(configuration: configuration)
+        
         let urlString = "https://life-left.p.mashape.com/time-left?birth=14+April+1955&gender=male"
         guard let url = NSURL(string: urlString) else { return }
-        let session = NSURLSession.sharedSession()
+        let request = NSMutableURLRequest(URL: url)
+        request.HTTPMethod = "GET"
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.addValue("application/json", forHTTPHeaderField: "Accept")
         let task = session.dataTaskWithURL(url) { (data: NSData?, response: NSURLResponse?, error: NSError?) -> Void in
             guard let data = data else { return }
             let json = JSON(data: data)
-            let currentAge = json["data"]["currentAge"].float
-            let yearsLeft = json["data"]["yearsLeft"].float
-            let monthsLeft = json["data"]["monthsLeft"].float
-            let daysLeft = json["data"]["daysLeft"].float
-            let lifeComplete = json["data"]["lifeComplete"].float
+            if let age = json["data"]["currentAge"].number {
+                print(age)
+            }
+            let currentAge = json["data"]["currentAge"].number
+            print(currentAge)
         }
         task.resume()
     }
-
+}
 
 
 // http://www.theapiurl.com/time-left?param1=value&param2=value2
