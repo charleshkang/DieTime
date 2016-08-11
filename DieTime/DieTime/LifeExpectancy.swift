@@ -11,7 +11,11 @@ import Foundation
 struct LifeExpectancy
 {
     let date: NSDate
-    let gender: String
+    let currentAge: Double
+    let yearsLeft: Double
+    let monthsLeft: Double
+    let daysLeft: Double
+    let lifeComplete: Double
     
     var dateString: String {
         get {
@@ -23,6 +27,3 @@ struct LifeExpectancy
     }
 }
 let today = NSDate()
-let manager = LifeExpectancy(date: today, gender: "male")
-
-

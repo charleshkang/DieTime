@@ -14,7 +14,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="xW2-3T-FOq"/>
+                        <segue destination="5Ge-UI-PWt" kind="relationship" relationship="rootViewController" id="qiS-cH-BJ8"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lhC-E7-pJi" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -85,7 +85,6 @@
                                 </state>
                                 <connections>
                                     <action selector="showDeathTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rq5-6D-4Kz"/>
-                                    <segue destination="5Ge-UI-PWt" kind="show" id="UYN-xi-RS5"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -110,15 +109,15 @@
                     </view>
                     <navigationItem key="navigationItem" title="Your Info" id="tTa-Ut-mkx"/>
                     <connections>
-                        <outlet property="agePicker" destination="nVg-Dw-cDc" id="PwJ-X0-X1O"/>
                         <outlet property="datePicker" destination="LyG-va-4HK" id="W2o-vI-pJP"/>
+                        <outlet property="genderPicker" destination="nVg-Dw-cDc" id="xlu-dI-fW9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="283" y="302"/>
+            <point key="canvasLocation" x="234" y="-448"/>
         </scene>
-        <!--Time Left Detail View Controller-->
+        <!--Life Expectancy-->
         <scene sceneID="Yc0-4v-mL7">
             <objects>
                 <viewController id="5Ge-UI-PWt" customClass="TimeLeftDetailViewController" customModule="DieTime" customModuleProvider="target" sceneMemberID="viewController">
@@ -131,51 +130,64 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="oVg-ZP-nYf">
-                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <rect key="frame" x="0.0" y="64" width="600" height="486"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zkk-JE-5EF">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="103"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="93"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Years Left" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rJK-4e-q1f">
-                                        <rect key="frame" x="0.0" y="108" width="600" height="103"/>
+                                        <rect key="frame" x="0.0" y="98" width="600" height="93"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Months Left" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="55C-rv-3rn">
-                                        <rect key="frame" x="0.0" y="216" width="600" height="104"/>
+                                        <rect key="frame" x="0.0" y="196" width="600" height="94"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Days Left" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H94-f0-3zD">
-                                        <rect key="frame" x="0.0" y="325" width="600" height="103"/>
+                                        <rect key="frame" x="0.0" y="295" width="600" height="93"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="% Life Complete" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Okx-X1-ea9">
-                                        <rect key="frame" x="0.0" y="433" width="600" height="103"/>
+                                        <rect key="frame" x="0.0" y="393" width="600" height="93"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lOZ-5s-StV">
+                                <rect key="frame" x="0.0" y="550" width="600" height="50"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Calculate Life Expectancy"/>
+                                <connections>
+                                    <action selector="calcuateLifeExpectancyButton:" destination="5Ge-UI-PWt" eventType="touchUpInside" id="cBa-La-w5f"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="oVg-ZP-nYf" firstAttribute="leading" secondItem="FjU-lD-T14" secondAttribute="leading" id="4FC-ng-hjn"/>
                             <constraint firstAttribute="trailing" secondItem="oVg-ZP-nYf" secondAttribute="trailing" id="7co-Iy-jl4"/>
                             <constraint firstItem="oVg-ZP-nYf" firstAttribute="centerY" secondItem="FjU-lD-T14" secondAttribute="centerY" id="CSq-1b-Y6J"/>
+                            <constraint firstItem="3jw-kN-Y90" firstAttribute="top" secondItem="lOZ-5s-StV" secondAttribute="bottom" id="DKb-0d-JeI"/>
                             <constraint firstItem="oVg-ZP-nYf" firstAttribute="top" secondItem="oeP-kB-WIs" secondAttribute="bottom" id="GaP-a2-uVX"/>
                             <constraint firstItem="oVg-ZP-nYf" firstAttribute="leading" secondItem="FjU-lD-T14" secondAttribute="leading" id="Kqe-yV-e7V"/>
                             <constraint firstItem="oVg-ZP-nYf" firstAttribute="top" secondItem="oeP-kB-WIs" secondAttribute="bottom" id="SMf-D7-enV"/>
                             <constraint firstItem="3jw-kN-Y90" firstAttribute="top" secondItem="oVg-ZP-nYf" secondAttribute="bottom" id="T8q-cI-Yxs"/>
+                            <constraint firstItem="lOZ-5s-StV" firstAttribute="leading" secondItem="FjU-lD-T14" secondAttribute="leading" id="axt-r2-27b"/>
+                            <constraint firstItem="3jw-kN-Y90" firstAttribute="top" secondItem="oVg-ZP-nYf" secondAttribute="bottom" constant="50" id="cE1-SX-nA4"/>
+                            <constraint firstItem="lOZ-5s-StV" firstAttribute="top" secondItem="oVg-ZP-nYf" secondAttribute="bottom" id="g2G-oS-zoT"/>
                             <constraint firstAttribute="trailing" secondItem="oVg-ZP-nYf" secondAttribute="trailing" id="gzu-fm-MzJ"/>
+                            <constraint firstAttribute="trailing" secondItem="lOZ-5s-StV" secondAttribute="trailing" id="oCY-BT-d5e"/>
                             <constraint firstItem="oVg-ZP-nYf" firstAttribute="centerX" secondItem="FjU-lD-T14" secondAttribute="centerX" id="qx3-ev-Qmq"/>
                         </constraints>
                         <variation key="default">
@@ -184,9 +196,11 @@
                                 <exclude reference="CSq-1b-Y6J"/>
                                 <exclude reference="GaP-a2-uVX"/>
                                 <exclude reference="gzu-fm-MzJ"/>
+                                <exclude reference="T8q-cI-Yxs"/>
                             </mask>
                         </variation>
                     </view>
+                    <navigationItem key="navigationItem" title="Life Expectancy" id="uSY-nR-3AB"/>
                     <connections>
                         <outlet property="ageLabel" destination="Zkk-JE-5EF" id="4vt-8K-8G1"/>
                         <outlet property="daysLeftLabel" destination="H94-f0-3zD" id="OYd-AI-eee"/>
@@ -197,7 +211,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qO6-tl-8Rm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="931" y="302"/>
+            <point key="canvasLocation" x="262" y="302"/>
         </scene>
     </scenes>
 </document>
