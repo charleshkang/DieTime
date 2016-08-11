@@ -18,7 +18,6 @@ class LifeExpectancyService
 {
     weak var delegate: LifeExpectancyServiceDelegate?
     
-    
     func getLifeInfo()
     {
         let configuration = NSURLSessionConfiguration.defaultSessionConfiguration()
@@ -36,31 +35,21 @@ class LifeExpectancyService
         let task = session.dataTaskWithURL(url) { (data: NSData?, response: NSURLResponse?, error: NSError?) -> Void in
             guard let data = data else { return }
             let json = JSON(data: data)
-            if let age = json["data"]["currentAge"].number {
-                print(age)
-            }
-            let currentAge = json["data"]["currentAge"].number
-            print(currentAge)
+            guard
+                let age = json["data"]["currentAge"].double,
+                let yearsLeft = json["data"]["yearsLeft"].double,
+                let monthsLeft = json["data"]["monthsLeft"].double,
+                let daysLeft = json["data"]["daysLeft"].double,
+                let percentageOfLifeCompleted = json["data"]["lifeComplete"].double
+                else { return }
+            
+            let lifeExpectancy = LifeExpectancy(date: NSDate(), currentAge: age, yearsLeft: yearsLeft, monthsLeft: monthsLeft, daysLeft: daysLeft, lifeComplete: percentageOfLifeCompleted)
+            dispatch_async(dispatch_get_main_queue(), { [weak self] () -> Void in
+                self?.delegate?.setLifeExpectancy(lifeExpectancy)
+                })
         }
         task.resume()
     }
 }
 
-
 // http://www.theapiurl.com/time-left?param1=value&param2=value2
-
-
-/*
- 
- let url = NSURL(string: "http://www.theapiurl.com/time-left?param1=value&param2=value2”)
- let request = NSMutableURLRequest(URL: url)
- request.setValue("your-api-key", forHTTPHeaderField: "X-Mashape-Key")
- 
- let task = session.dataTaskWithRequest(request) { (data, response, error) in
- if error == nil {
- ….
- }
- }
- 
- task.resume()
- */
