@@ -26,7 +26,7 @@ class LifeExpectancyService
         ]
         let session = NSURLSession(configuration: configuration)
         
-        let urlString = "https://life-left.p.mashape.com/time-left?birth=14+April+1955&gender=male"
+        let urlString = "https://life-left.p.mashape.com/time-left?birth=21+February+1995&gender=male"
         guard let url = NSURL(string: urlString) else { return }
         let request = NSMutableURLRequest(URL: url)
         request.HTTPMethod = "GET"
