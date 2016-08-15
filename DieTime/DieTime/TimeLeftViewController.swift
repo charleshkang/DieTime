@@ -28,6 +28,7 @@ enum Date: String
 class TimeLeftViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
     
 {
+    let percentSymbol = "%"
     @IBOutlet weak var genderPicker: UIPickerView!
     @IBOutlet weak var datePicker: UIDatePicker!
     
@@ -95,7 +96,7 @@ extension TimeLeftViewController: LifeExpectancyServiceDelegate
         detailVC.yearsLeftLabel.text = String(format: "You have %.2f years left to live.", lifeExpectancy.yearsLeft)
         detailVC.monthsLeftLabel.text = String(format: "You have %.2f months left to live.", lifeExpectancy.monthsLeft)
         detailVC.daysLeftLabel.text = String(format: "You have %.2f days left to live.", lifeExpectancy.daysLeft)
-        detailVC.lifeCompleteLabel.text = String(format: "You are %.2f percent done with your life.", lifeExpectancy.lifeComplete)
+        detailVC.lifeCompleteLabel.text = String(format: "You are %.2f done with your life.", lifeExpectancy.lifeComplete)
         showViewController(detailVC, sender: self)
     }
 }
