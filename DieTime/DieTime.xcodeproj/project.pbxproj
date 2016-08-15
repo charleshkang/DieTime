@@ -97,7 +97,7 @@
 		BFECD9B31D5BBCA40065B7FD /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				BFECD9B51D5C00380065B7FD /* Not Using */,
+				BFECD9AB1D5BABC30065B7FD /* TimeLeftViewController.swift */,
 				BFECD9AD1D5BB36F0065B7FD /* TimeLeftDetailViewController.swift */,
 			);
 			name = Controller;
@@ -110,14 +110,6 @@
 				BFECD9B11D5BBB890065B7FD /* LifeExpectancyService.swift */,
 			);
 			name = Model;
-			sourceTree = "<group>";
-		};
-		BFECD9B51D5C00380065B7FD /* Not Using */ = {
-			isa = PBXGroup;
-			children = (
-				BFECD9AB1D5BABC30065B7FD /* TimeLeftViewController.swift */,
-			);
-			name = "Not Using";
 			sourceTree = "<group>";
 		};
 		F172AE77CB74A32880D012AB /* Pods */ = {

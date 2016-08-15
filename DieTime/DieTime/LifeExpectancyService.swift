@@ -18,15 +18,18 @@ class LifeExpectancyService
 {
     weak var delegate: LifeExpectancyServiceDelegate?
     
-    func getLifeInfo()
+    let detailVC = TimeLeftDetailViewController()
+    
+    func getLifeInfo(day: Int, month: String, year: Int, gender: Gender)
     {
         let configuration = NSURLSessionConfiguration.defaultSessionConfiguration()
         configuration.HTTPAdditionalHeaders = [
             "X-Mashape-Key" : "jY0bEhHCBpmsh8j1mpA5p11tCJGyp1tok3Zjsn4ubbvNNp5Jt3"
         ]
         let session = NSURLSession(configuration: configuration)
-        
-        let urlString = "https://life-left.p.mashape.com/time-left?birth=21+February+1995&gender=male"
+    
+        let urlString = "https://life-left.p.mashape.com/time-left?birth=\(day)+\(month)+\(year)&gender=\(gender)"
+//        let urlString = "https://life-left.p.mashape.com/time-left?birth=21+February+1995&gender=male"
         guard let url = NSURL(string: urlString) else { return }
         let request = NSMutableURLRequest(URL: url)
         request.HTTPMethod = "GET"
@@ -51,5 +54,3 @@ class LifeExpectancyService
         task.resume()
     }
 }
-
-// http://www.theapiurl.com/time-left?param1=value&param2=value2
