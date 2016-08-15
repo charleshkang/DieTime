@@ -85,7 +85,6 @@
                                 </state>
                                 <connections>
                                     <action selector="showDeathTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rq5-6D-4Kz"/>
-                                    <segue destination="5Ge-UI-PWt" kind="show" id="isc-H3-NcS"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -116,7 +115,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-46" y="302"/>
+            <point key="canvasLocation" x="-52" y="310"/>
         </scene>
         <!--Life Expectancy-->
         <scene sceneID="Yc0-4v-mL7">
@@ -130,76 +129,62 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="oVg-ZP-nYf">
-                                <rect key="frame" x="0.0" y="64" width="600" height="486"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zkk-JE-5EF">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="93"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Years Left" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rJK-4e-q1f">
-                                        <rect key="frame" x="0.0" y="98" width="600" height="93"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Months Left" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="55C-rv-3rn">
-                                        <rect key="frame" x="0.0" y="196" width="600" height="94"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Days Left" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H94-f0-3zD">
-                                        <rect key="frame" x="0.0" y="295" width="600" height="93"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="% Life Complete" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Okx-X1-ea9">
-                                        <rect key="frame" x="0.0" y="393" width="600" height="93"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lOZ-5s-StV">
-                                <rect key="frame" x="0.0" y="550" width="600" height="50"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Calculate Life Expectancy"/>
-                                <connections>
-                                    <action selector="calcuateLifeExpectancyButton:" destination="5Ge-UI-PWt" eventType="touchUpInside" id="cBa-La-w5f"/>
-                                </connections>
-                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zkk-JE-5EF">
+                                <rect key="frame" x="0.0" y="176" width="600" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="aum-Hx-jap"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Years Left" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rJK-4e-q1f">
+                                <rect key="frame" x="0.0" y="226" width="600" height="50"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Months Left" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="55C-rv-3rn">
+                                <rect key="frame" x="0.0" y="275" width="600" height="50"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Days Left" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H94-f0-3zD">
+                                <rect key="frame" x="0.0" y="325" width="600" height="50"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="% Life Complete" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Okx-X1-ea9">
+                                <rect key="frame" x="0.0" y="374" width="600" height="50"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="oVg-ZP-nYf" firstAttribute="leading" secondItem="FjU-lD-T14" secondAttribute="leading" id="4FC-ng-hjn"/>
-                            <constraint firstAttribute="trailing" secondItem="oVg-ZP-nYf" secondAttribute="trailing" id="7co-Iy-jl4"/>
-                            <constraint firstItem="oVg-ZP-nYf" firstAttribute="centerY" secondItem="FjU-lD-T14" secondAttribute="centerY" id="CSq-1b-Y6J"/>
-                            <constraint firstItem="3jw-kN-Y90" firstAttribute="top" secondItem="lOZ-5s-StV" secondAttribute="bottom" id="DKb-0d-JeI"/>
-                            <constraint firstItem="oVg-ZP-nYf" firstAttribute="top" secondItem="oeP-kB-WIs" secondAttribute="bottom" id="GaP-a2-uVX"/>
-                            <constraint firstItem="oVg-ZP-nYf" firstAttribute="leading" secondItem="FjU-lD-T14" secondAttribute="leading" id="Kqe-yV-e7V"/>
-                            <constraint firstItem="oVg-ZP-nYf" firstAttribute="top" secondItem="oeP-kB-WIs" secondAttribute="bottom" id="SMf-D7-enV"/>
-                            <constraint firstItem="3jw-kN-Y90" firstAttribute="top" secondItem="oVg-ZP-nYf" secondAttribute="bottom" id="T8q-cI-Yxs"/>
-                            <constraint firstItem="lOZ-5s-StV" firstAttribute="leading" secondItem="FjU-lD-T14" secondAttribute="leading" id="axt-r2-27b"/>
-                            <constraint firstItem="3jw-kN-Y90" firstAttribute="top" secondItem="oVg-ZP-nYf" secondAttribute="bottom" constant="50" id="cE1-SX-nA4"/>
-                            <constraint firstItem="lOZ-5s-StV" firstAttribute="top" secondItem="oVg-ZP-nYf" secondAttribute="bottom" id="g2G-oS-zoT"/>
-                            <constraint firstAttribute="trailing" secondItem="oVg-ZP-nYf" secondAttribute="trailing" id="gzu-fm-MzJ"/>
-                            <constraint firstAttribute="trailing" secondItem="lOZ-5s-StV" secondAttribute="trailing" id="oCY-BT-d5e"/>
-                            <constraint firstItem="oVg-ZP-nYf" firstAttribute="centerX" secondItem="FjU-lD-T14" secondAttribute="centerX" id="qx3-ev-Qmq"/>
+                            <constraint firstItem="H94-f0-3zD" firstAttribute="top" secondItem="rJK-4e-q1f" secondAttribute="bottom" constant="49" id="4M6-YB-y08"/>
+                            <constraint firstItem="55C-rv-3rn" firstAttribute="centerY" secondItem="FjU-lD-T14" secondAttribute="centerY" id="4bc-Hs-JgW"/>
+                            <constraint firstItem="3jw-kN-Y90" firstAttribute="top" secondItem="Okx-X1-ea9" secondAttribute="bottom" constant="176" id="5jC-8p-9Yv"/>
+                            <constraint firstItem="Zkk-JE-5EF" firstAttribute="trailing" secondItem="rJK-4e-q1f" secondAttribute="trailing" id="GWw-PD-N3n"/>
+                            <constraint firstItem="Zkk-JE-5EF" firstAttribute="leading" secondItem="FjU-lD-T14" secondAttribute="leading" id="JZj-79-fFR"/>
+                            <constraint firstItem="Okx-X1-ea9" firstAttribute="top" secondItem="55C-rv-3rn" secondAttribute="bottom" constant="49" id="TDC-uO-iPq"/>
+                            <constraint firstItem="H94-f0-3zD" firstAttribute="trailing" secondItem="Okx-X1-ea9" secondAttribute="trailing" id="Wc7-mm-Wse"/>
+                            <constraint firstItem="rJK-4e-q1f" firstAttribute="trailing" secondItem="55C-rv-3rn" secondAttribute="trailing" id="cgf-aZ-gRN"/>
+                            <constraint firstItem="Zkk-JE-5EF" firstAttribute="leading" secondItem="rJK-4e-q1f" secondAttribute="leading" id="dUW-84-UkU"/>
+                            <constraint firstItem="H94-f0-3zD" firstAttribute="leading" secondItem="Okx-X1-ea9" secondAttribute="leading" id="dgZ-1L-lui"/>
+                            <constraint firstAttribute="trailing" secondItem="Zkk-JE-5EF" secondAttribute="trailing" id="fhv-Dh-qZc"/>
+                            <constraint firstItem="rJK-4e-q1f" firstAttribute="leading" secondItem="55C-rv-3rn" secondAttribute="leading" id="gcC-wz-jIj"/>
+                            <constraint firstItem="3jw-kN-Y90" firstAttribute="top" secondItem="H94-f0-3zD" secondAttribute="bottom" constant="225" id="giG-38-Q6A"/>
+                            <constraint firstItem="H94-f0-3zD" firstAttribute="top" secondItem="55C-rv-3rn" secondAttribute="bottom" id="hI4-WW-hVz"/>
+                            <constraint firstItem="55C-rv-3rn" firstAttribute="trailing" secondItem="H94-f0-3zD" secondAttribute="trailing" id="lTV-pb-BGx"/>
+                            <constraint firstItem="Zkk-JE-5EF" firstAttribute="top" secondItem="oeP-kB-WIs" secondAttribute="bottom" constant="156" id="mTd-6A-Ell"/>
+                            <constraint firstItem="55C-rv-3rn" firstAttribute="top" secondItem="Zkk-JE-5EF" secondAttribute="bottom" constant="49" id="mWs-fS-vKh"/>
+                            <constraint firstItem="rJK-4e-q1f" firstAttribute="top" secondItem="Zkk-JE-5EF" secondAttribute="bottom" id="oxi-qL-Mv9"/>
+                            <constraint firstItem="55C-rv-3rn" firstAttribute="leading" secondItem="H94-f0-3zD" secondAttribute="leading" id="pVq-EU-hC5"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="4FC-ng-hjn"/>
-                                <exclude reference="CSq-1b-Y6J"/>
-                                <exclude reference="GaP-a2-uVX"/>
-                                <exclude reference="gzu-fm-MzJ"/>
-                                <exclude reference="T8q-cI-Yxs"/>
-                            </mask>
-                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Life Expectancy" id="uSY-nR-3AB"/>
                     <connections>
