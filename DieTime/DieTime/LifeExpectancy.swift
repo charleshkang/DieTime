@@ -17,13 +17,13 @@ struct LifeExpectancy
     let daysLeft: Double
     let lifeComplete: Double
     
-    var dateString: String {
-        get {
-            let df = NSDateFormatter()
-            df.dateFormat = "d MMMM YYYY"
-            df.locale = NSLocale.currentLocale()
-            return df.stringFromDate(date)
-        }
-    }
+//    var dateString: String {
+//        get {
+//            let df = NSDateFormatter()
+//            df.dateFormat = "d MMMM YYYY"
+//            df.locale = NSLocale.currentLocale()
+//            return df.stringFromDate(date)
+//        }
+//    }
 }
 let today = NSDate()

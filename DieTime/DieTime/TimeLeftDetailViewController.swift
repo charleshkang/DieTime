@@ -16,29 +16,27 @@ class TimeLeftDetailViewController: UIViewController
     @IBOutlet weak var daysLeftLabel: UILabel!
     @IBOutlet weak var lifeCompleteLabel: UILabel!
     
-    let lifeExpectancyService = LifeExpectancyService()
+//    let lifeExpectancyService = LifeExpectancyService()
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        lifeExpectancyService.delegate = self
+//        lifeExpectancyService.delegate = self
     }
     
     @IBAction func calcuateLifeExpectancyButton(sender: AnyObject)
     {
-        lifeExpectancyService.getLifeInfo()
     }
 }
 
-extension TimeLeftDetailViewController: LifeExpectancyServiceDelegate
-{
-    func setLifeExpectancy(lifeExpectancy: LifeExpectancy)
-    {
-        ageLabel.text = String(lifeExpectancy.currentAge)
-        print(ageLabel.text)
-        yearsLeftLabel.text = String(lifeExpectancy.yearsLeft)
-        monthsLeftLabel.text = String(lifeExpectancy.monthsLeft)
-        daysLeftLabel.text = String(lifeExpectancy.daysLeft)
-        lifeCompleteLabel.text = String(lifeExpectancy.lifeComplete)
-    }
-}
+//extension TimeLeftDetailViewController: LifeExpectancyServiceDelegate
+//{
+//    func setLifeExpectancy(lifeExpectancy: LifeExpectancy)
+//    {
+//        ageLabel.text = String(format: "You are %.2f years old.", lifeExpectancy.currentAge)
+//        yearsLeftLabel.text = String(format: "You have %.2f years left to live.", lifeExpectancy.yearsLeft)
+//        monthsLeftLabel.text = String(format: "You have %.2f months left to live.", lifeExpectancy.monthsLeft)
+//        daysLeftLabel.text = String(format: "You have %.2f days left to live.", lifeExpectancy.daysLeft)
+//        lifeCompleteLabel.text = String(format: "You are %.2f done with your life.", lifeExpectancy.lifeComplete)
+//    }
+//}
