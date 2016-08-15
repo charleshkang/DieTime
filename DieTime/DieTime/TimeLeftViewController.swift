@@ -28,11 +28,12 @@ enum Date: String
 class TimeLeftViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
     
 {
-    @IBOutlet weak var testLabel: UILabel!
     @IBOutlet weak var genderPicker: UIPickerView!
     @IBOutlet weak var datePicker: UIDatePicker!
     
-    let detailVC = TimeLeftDetailViewController()
+    let detailVC: TimeLeftDetailViewController = {
+        return UIStoryboard(name: "Main", bundle:  nil).instantiateViewControllerWithIdentifier("DetailVC") as!TimeLeftDetailViewController
+    }()
     
     let dateFormatter = NSDateFormatter()
     let date = NSDate()
@@ -41,7 +42,7 @@ class TimeLeftViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        lifeExpectanctyService.delegate = self
+//        lifeExpectanctyService.delegate = self
     }
     
     @IBAction func showDeathTouchUpInside(sender: AnyObject)
@@ -53,12 +54,6 @@ class TimeLeftViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         let monthSymbol = months[month-1]
         
         lifeExpectanctyService.getLifeInfo(components.day, month: monthSymbol, year: components.year, gender: Gender.allValues[genderPicker.selectedRowInComponent(0)])
-        
-        detailVC.ageLabel.text = String(format: "You are %.2f years old.", lifeExpectancy.currentAge)
-        detailVC.yearsLeftLabel.text = String(format: "You have %.2f years left to live.", lifeExpectancy.yearsLeft)
-        detailVC.monthsLeftLabel.text = String(format: "You have %.2f months left to live.", lifeExpectancy.monthsLeft)
-        detailVC.daysLeftLabel.text = String(format: "You have %.2f days left to live.", lifeExpectancy.daysLeft)
-        detailVC.lifeCompleteLabel.text = String(format: "You are %.2f percent done with your life.", lifeExpectancy.lifeComplete)
     }
     
     @IBAction func datePickerChanged(sender: UIDatePicker)
@@ -90,15 +85,15 @@ class TimeLeftViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     }
 }
 
-extension TimeLeftViewController: LifeExpectancyServiceDelegate
+extension TimeLeftDetailViewController: LifeExpectancyServiceDelegate
 {
     func setLifeExpectancy(lifeExpectancy: LifeExpectancy)
     {
-        detailVC.ageLabel.text = String(format: "You are %.2f years old.", lifeExpectancy.currentAge)
-        detailVC.yearsLeftLabel.text = String(format: "You have %.2f years left to live.", lifeExpectancy.yearsLeft)
-        detailVC.monthsLeftLabel.text = String(format: "You have %.2f months left to live.", lifeExpectancy.monthsLeft)
-        detailVC.daysLeftLabel.text = String(format: "You have %.2f days left to live.", lifeExpectancy.daysLeft)
-        detailVC.lifeCompleteLabel.text = String(format: "You are %.2f percent done with your life.", lifeExpectancy.lifeComplete)
+        ageLabel.text = String(format: "You are %.2f years old.", lifeExpectancy.currentAge)
+        yearsLeftLabel.text = String(format: "You have %.2f years left to live.", lifeExpectancy.yearsLeft)
+        monthsLeftLabel.text = String(format: "You have %.2f months left to live.", lifeExpectancy.monthsLeft)
+        daysLeftLabel.text = String(format: "You have %.2f days left to live.", lifeExpectancy.daysLeft)
+        lifeCompleteLabel.text = String(format: "You are %.2f percent done with your life.", lifeExpectancy.lifeComplete)
     }
 }
 
