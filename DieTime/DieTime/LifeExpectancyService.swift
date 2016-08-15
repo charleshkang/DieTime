@@ -28,7 +28,8 @@ class LifeExpectancyService
         ]
         let session = NSURLSession(configuration: configuration)
     
-        let urlString = "https://life-left.p.mashape.com/time-left?birth=\(day)+\(month)+\(year)&gender=\(gender)"
+        let urlString = "https://life-left.p.mashape.com/time-left?birth=\(day)+\(month)+\(year)&gender=\(gender.rawValue)"
+        print(urlString)
 //        let urlString = "https://life-left.p.mashape.com/time-left?birth=21+February+1995&gender=male"
         guard let url = NSURL(string: urlString) else { return }
         let request = NSMutableURLRequest(URL: url)

@@ -28,16 +28,19 @@ enum Date: String
 class TimeLeftViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
     
 {
-    @IBOutlet weak var testLabel: UILabel!
     @IBOutlet weak var genderPicker: UIPickerView!
     @IBOutlet weak var datePicker: UIDatePicker!
     
-    let detailVC = TimeLeftDetailViewController()
+    let detailVC: TimeLeftDetailViewController = {
+        let vc = UIStoryboard(name: "Main", bundle:  nil).instantiateViewControllerWithIdentifier("DetailVC") as! TimeLeftDetailViewController
+        vc.loadView()
+        return vc
+    }()
     
     let dateFormatter = NSDateFormatter()
     let date = NSDate()
     let lifeExpectanctyService = LifeExpectancyService()
-    
+
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -53,12 +56,6 @@ class TimeLeftViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         let monthSymbol = months[month-1]
         
         lifeExpectanctyService.getLifeInfo(components.day, month: monthSymbol, year: components.year, gender: Gender.allValues[genderPicker.selectedRowInComponent(0)])
-        
-        detailVC.ageLabel.text = String(format: "You are %.2f years old.", lifeExpectancy.currentAge)
-        detailVC.yearsLeftLabel.text = String(format: "You have %.2f years left to live.", lifeExpectancy.yearsLeft)
-        detailVC.monthsLeftLabel.text = String(format: "You have %.2f months left to live.", lifeExpectancy.monthsLeft)
-        detailVC.daysLeftLabel.text = String(format: "You have %.2f days left to live.", lifeExpectancy.daysLeft)
-        detailVC.lifeCompleteLabel.text = String(format: "You are %.2f percent done with your life.", lifeExpectancy.lifeComplete)
     }
     
     @IBAction func datePickerChanged(sender: UIDatePicker)
@@ -94,18 +91,11 @@ extension TimeLeftViewController: LifeExpectancyServiceDelegate
 {
     func setLifeExpectancy(lifeExpectancy: LifeExpectancy)
     {
-        detailVC.ageLabel.text = String(format: "You are %.2f years old.", lifeExpectancy.currentAge)
+        detailVC.ageLabel.text = String(format: "You are a %.2f year old \(Gender.allValues[genderPicker.selectedRowInComponent(0)]).", lifeExpectancy.currentAge)
         detailVC.yearsLeftLabel.text = String(format: "You have %.2f years left to live.", lifeExpectancy.yearsLeft)
         detailVC.monthsLeftLabel.text = String(format: "You have %.2f months left to live.", lifeExpectancy.monthsLeft)
         detailVC.daysLeftLabel.text = String(format: "You have %.2f days left to live.", lifeExpectancy.daysLeft)
         detailVC.lifeCompleteLabel.text = String(format: "You are %.2f percent done with your life.", lifeExpectancy.lifeComplete)
+        showViewController(detailVC, sender: self)
     }
 }
-
-
-
-
-//        print("year: \(components.year)")
-//        print("month: \(components.month)")
-//        print("day: \(components.day)")
-//        print("user is \(Gender.allValues[genderPicker.selectedRowInComponent(0)])")
