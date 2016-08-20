@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -45,6 +46,7 @@
                                     </label>
                                     <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="LyG-va-4HK">
                                         <rect key="frame" x="0.0" y="24" width="600" height="216"/>
+                                        <color key="backgroundColor" red="0.29411764705882354" green="0.41568627450980394" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <date key="date" timeIntervalSinceReferenceDate="492547293.59614003">
                                             <!--2016-08-10 18:41:33 +0000-->
                                         </date>
@@ -74,7 +76,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="0Ba-Ho-gI4">
-                                <rect key="frame" x="0.0" y="544" width="600" height="56"/>
+                                <rect key="frame" x="0.0" y="540" width="600" height="60"/>
                                 <color key="backgroundColor" red="1" green="0.41112781816177757" blue="0.88567258555838091" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="GkO-Pk-pHD"/>
@@ -83,6 +85,14 @@
                                 <state key="normal" title="Tell me when I'm going to die">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="GkO-Pk-pHD"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact">
+                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                </variation>
                                 <connections>
                                     <action selector="showDeathTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rq5-6D-4Kz"/>
                                 </connections>
@@ -97,6 +107,7 @@
                             <constraint firstItem="0Ba-Ho-gI4" firstAttribute="leading" secondItem="6TS-0J-B4F" secondAttribute="leading" id="QsA-Py-nUr"/>
                             <constraint firstItem="e4c-3S-40q" firstAttribute="leading" secondItem="6TS-0J-B4F" secondAttribute="leading" id="cb7-jU-Yli"/>
                             <constraint firstItem="e4c-3S-40q" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="dfE-HE-VpM"/>
+                            <constraint firstItem="0Ba-Ho-gI4" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.1" id="fdq-ym-Neu"/>
                             <constraint firstItem="0Ba-Ho-gI4" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="hGK-CV-YCb"/>
                             <constraint firstItem="e4c-3S-40q" firstAttribute="trailing" secondItem="6TS-0J-B4F" secondAttribute="trailing" id="k0P-8e-wqG"/>
                             <constraint firstAttribute="trailing" secondItem="e4c-3S-40q" secondAttribute="trailing" id="mfz-22-Dtp"/>
