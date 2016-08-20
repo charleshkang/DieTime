@@ -8,27 +8,8 @@
 
 import UIKit
 
-enum Gender: String
+class TimeLeftViewController: UIViewController
 {
-    case male
-    case female
-    
-    static let allValues: [Gender] = [.male, .female]
-}
-
-enum Date: String
-{
-    case Year
-    case Month
-    case Day
-    
-    static let allValues: [Date] = [.Year, .Month, .Day]
-}
-
-class TimeLeftViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
-    
-{
-    let percentSymbol = "%"
     @IBOutlet weak var genderPicker: UIPickerView!
     @IBOutlet weak var datePicker: UIDatePicker!
     
@@ -57,12 +38,6 @@ class TimeLeftViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         let monthSymbol = months[month-1]
         
         lifeExpectanctyService.getLifeInfo(components.day, month: monthSymbol, year: components.year, gender: Gender.allValues[genderPicker.selectedRowInComponent(0)])
-    }
-    
-    @IBAction func datePickerChanged(sender: UIDatePicker)
-    {
-        dateFormatter.dateStyle = NSDateFormatterStyle.LongStyle
-        print(dateFormatter.stringFromDate(datePicker.date))
     }
     
     // MARK: Picker View Data Source

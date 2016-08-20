@@ -9,15 +9,14 @@
 import Foundation
 import SwiftyJSON
 
-protocol LifeExpectancyServiceDelegate: class
+protocol LifeExpectancyServiceDelegate
 {
     func setLifeExpectancy(lifeExpectancy: LifeExpectancy)
 }
 
 class LifeExpectancyService
 {
-    weak var delegate: LifeExpectancyServiceDelegate?
-    
+    var delegate: LifeExpectancyServiceDelegate?
     let detailVC = TimeLeftDetailViewController()
     
     func getLifeInfo(day: Int, month: String, year: Int, gender: Gender)

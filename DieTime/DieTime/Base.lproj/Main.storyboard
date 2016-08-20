@@ -50,9 +50,6 @@
                                         <date key="date" timeIntervalSinceReferenceDate="492547293.59614003">
                                             <!--2016-08-10 18:41:33 +0000-->
                                         </date>
-                                        <connections>
-                                            <action selector="datePickerChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="0rI-M1-BFq"/>
-                                        </connections>
                                     </datePicker>
                                 </subviews>
                             </stackView>

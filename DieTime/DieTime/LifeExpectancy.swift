@@ -16,14 +16,12 @@ struct LifeExpectancy
     let monthsLeft: Double
     let daysLeft: Double
     let lifeComplete: Double
-    
-//    var dateString: String {
-//        get {
-//            let df = NSDateFormatter()
-//            df.dateFormat = "d MMMM YYYY"
-//            df.locale = NSLocale.currentLocale()
-//            return df.stringFromDate(date)
-//        }
-//    }
 }
-let today = NSDate()
+
+enum Gender: String
+{
+    case male
+    case female
+    
+    static let allValues: [Gender] = [.male, .female]
+}
