@@ -8,6 +8,7 @@
 
 import Foundation
 import SwiftyJSON
+import SpriteKit
 
 protocol LifeExpectancyServiceDelegate
 {
@@ -45,7 +46,8 @@ class LifeExpectancyService
                 let percentageOfLifeCompleted = json["data"]["lifeComplete"].double
                 else { return }
             
-            let lifeExpectancy = LifeExpectancy(date: NSDate(), currentAge: age, yearsLeft: yearsLeft, monthsLeft: monthsLeft, daysLeft: daysLeft, lifeComplete: percentageOfLifeCompleted)
+            let lifeExpectancy = LifeExpectancy(currentAge: age, yearsLeft: yearsLeft, monthsLeft: monthsLeft, daysLeft: daysLeft, lifeComplete: percentageOfLifeCompleted)
+            
             dispatch_async(dispatch_get_main_queue(), { [weak self] () -> Void in
                 self?.delegate?.setLifeExpectancy(lifeExpectancy)
                 })

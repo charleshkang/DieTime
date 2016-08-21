@@ -10,7 +10,6 @@ import Foundation
 
 struct LifeExpectancy
 {
-    let date: NSDate
     let currentAge: Double
     let yearsLeft: Double
     let monthsLeft: Double

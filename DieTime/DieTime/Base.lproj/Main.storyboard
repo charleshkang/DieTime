@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -15,7 +14,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="eXI-DC-58y"/>
+                        <segue destination="fr9-xv-gb5" kind="relationship" relationship="rootViewController" id="tcB-gx-yFT"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lhC-E7-pJi" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -23,112 +22,108 @@
             <point key="canvasLocation" x="-679" y="302"/>
         </scene>
         <!--Your Info-->
-        <scene sceneID="tne-QT-ifu">
+        <scene sceneID="rPP-cI-hPp">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="TimeLeftViewController" customModule="DieTime" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="fr9-xv-gb5" customClass="TimeLeftViewController" customModule="LifeExpectancy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="AOl-px-Lzs"/>
+                        <viewControllerLayoutGuide type="bottom" id="9aE-zH-TMG"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="0jw-sc-q58">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="e4c-3S-40q">
-                                <rect key="frame" x="0.0" y="64" width="600" height="240"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Birthday" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bc5-hP-rdJ">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="24"/>
-                                        <color key="backgroundColor" red="0.36666108804664699" green="0.51824904554449702" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="LyG-va-4HK">
-                                        <rect key="frame" x="0.0" y="24" width="600" height="216"/>
-                                        <color key="backgroundColor" red="0.29411764705882354" green="0.41568627450980394" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <date key="date" timeIntervalSinceReferenceDate="492547293.59614003">
-                                            <!--2016-08-10 18:41:33 +0000-->
-                                        </date>
-                                    </datePicker>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="6TS-0J-B4F">
-                                <rect key="frame" x="0.0" y="304" width="600" height="240"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gender" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EO3-BK-eY7">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="24"/>
-                                        <color key="backgroundColor" red="0.36666108804664699" green="0.51824904554449702" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nVg-Dw-cDc">
-                                        <rect key="frame" x="0.0" y="24" width="600" height="216"/>
-                                        <connections>
-                                            <outlet property="dataSource" destination="BYZ-38-t0r" id="68v-Kz-DEm"/>
-                                            <outlet property="delegate" destination="BYZ-38-t0r" id="wFe-8m-eQU"/>
-                                        </connections>
-                                    </pickerView>
-                                </subviews>
-                            </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="0Ba-Ho-gI4">
-                                <rect key="frame" x="0.0" y="540" width="600" height="60"/>
-                                <color key="backgroundColor" red="1" green="0.41112781816177757" blue="0.88567258555838091" alpha="1" colorSpace="calibratedRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Birthday" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pu6-h9-PEC">
+                                <rect key="frame" x="0.0" y="64" width="600" height="40"/>
+                                <color key="backgroundColor" red="0.17439988206423415" green="0.2241542865322233" blue="0.77420614919354835" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="56" id="GkO-Pk-pHD"/>
+                                    <constraint firstAttribute="height" constant="40" id="cFy-N1-CVc"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="Tell me when I'm going to die">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="LSj-h9-ybL">
+                                <rect key="frame" x="0.0" y="104" width="600" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="493445776.103095">
+                                    <!--2016-08-21 04:16:16 +0000-->
+                                </date>
+                                <date key="minimumDate" timeIntervalSinceReferenceDate="-2335266000">
+                                    <!--1927-01-01 11:00:00 +0000-->
+                                </date>
+                                <date key="maximumDate" timeIntervalSinceReferenceDate="504874800">
+                                    <!--2016-12-31 11:00:00 +0000-->
+                                </date>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gender" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lOW-Gc-Wyp">
+                                <rect key="frame" x="0.0" y="319" width="600" height="40"/>
+                                <color key="backgroundColor" red="0.17439988209999999" green="0.22415428649999999" blue="0.77420614919999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="sbz-p9-STh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zzp-51-H9l">
+                                <rect key="frame" x="0.0" y="359" width="600" height="196"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="196" id="Pjw-Wh-c2Q"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="fr9-xv-gb5" id="P9W-O5-sML"/>
+                                    <outlet property="delegate" destination="fr9-xv-gb5" id="csc-Mp-Bxh"/>
+                                </connections>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rf5-My-4Q7">
+                                <rect key="frame" x="0.0" y="554" width="600" height="46"/>
+                                <color key="backgroundColor" red="1" green="0.26210821133578133" blue="0.20228751544908108" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="wqs-ph-ZT2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Calculate Life Expectancy">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="GkO-Pk-pHD"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=compact">
-                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                </variation>
                                 <connections>
-                                    <action selector="showDeathTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rq5-6D-4Kz"/>
+                                    <action selector="showDeathTouchUpInside:" destination="fr9-xv-gb5" eventType="touchUpInside" id="H03-eV-ih4"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="6TS-0J-B4F" firstAttribute="top" secondItem="e4c-3S-40q" secondAttribute="bottom" id="9o9-WE-Mib"/>
-                            <constraint firstItem="0Ba-Ho-gI4" firstAttribute="trailing" secondItem="6TS-0J-B4F" secondAttribute="trailing" id="FBI-bf-3hR"/>
-                            <constraint firstItem="6TS-0J-B4F" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Kdh-Be-Yx5"/>
-                            <constraint firstItem="e4c-3S-40q" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Lt2-ke-wAv"/>
-                            <constraint firstItem="0Ba-Ho-gI4" firstAttribute="leading" secondItem="6TS-0J-B4F" secondAttribute="leading" id="QsA-Py-nUr"/>
-                            <constraint firstItem="e4c-3S-40q" firstAttribute="leading" secondItem="6TS-0J-B4F" secondAttribute="leading" id="cb7-jU-Yli"/>
-                            <constraint firstItem="e4c-3S-40q" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="dfE-HE-VpM"/>
-                            <constraint firstItem="0Ba-Ho-gI4" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.1" id="fdq-ym-Neu"/>
-                            <constraint firstItem="0Ba-Ho-gI4" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="hGK-CV-YCb"/>
-                            <constraint firstItem="e4c-3S-40q" firstAttribute="trailing" secondItem="6TS-0J-B4F" secondAttribute="trailing" id="k0P-8e-wqG"/>
-                            <constraint firstAttribute="trailing" secondItem="e4c-3S-40q" secondAttribute="trailing" id="mfz-22-Dtp"/>
+                            <constraint firstItem="Zzp-51-H9l" firstAttribute="top" secondItem="lOW-Gc-Wyp" secondAttribute="bottom" id="1ld-SO-2aR"/>
+                            <constraint firstItem="LSj-h9-ybL" firstAttribute="top" secondItem="Pu6-h9-PEC" secondAttribute="bottom" id="7Kt-Kr-YxY"/>
+                            <constraint firstItem="Zzp-51-H9l" firstAttribute="leading" secondItem="rf5-My-4Q7" secondAttribute="leading" id="CyN-Pi-lvY"/>
+                            <constraint firstItem="lOW-Gc-Wyp" firstAttribute="trailing" secondItem="Zzp-51-H9l" secondAttribute="trailing" id="GiN-of-Yia"/>
+                            <constraint firstItem="LSj-h9-ybL" firstAttribute="leading" secondItem="lOW-Gc-Wyp" secondAttribute="leading" id="Osg-Qd-g0m"/>
+                            <constraint firstItem="lOW-Gc-Wyp" firstAttribute="leading" secondItem="Zzp-51-H9l" secondAttribute="leading" id="UAX-QM-1cr"/>
+                            <constraint firstItem="Zzp-51-H9l" firstAttribute="trailing" secondItem="rf5-My-4Q7" secondAttribute="trailing" id="UkW-1Y-yn0"/>
+                            <constraint firstItem="Pu6-h9-PEC" firstAttribute="leading" secondItem="0jw-sc-q58" secondAttribute="leading" id="aPL-bp-qgY"/>
+                            <constraint firstItem="rf5-My-4Q7" firstAttribute="bottom" secondItem="9aE-zH-TMG" secondAttribute="top" id="cYu-sx-chB"/>
+                            <constraint firstItem="LSj-h9-ybL" firstAttribute="trailing" secondItem="lOW-Gc-Wyp" secondAttribute="trailing" id="gNi-4v-5b2"/>
+                            <constraint firstItem="Pu6-h9-PEC" firstAttribute="trailing" secondItem="LSj-h9-ybL" secondAttribute="trailing" id="hTR-pK-K6W"/>
+                            <constraint firstAttribute="trailing" secondItem="Pu6-h9-PEC" secondAttribute="trailing" id="j8k-F2-UGK"/>
+                            <constraint firstItem="9aE-zH-TMG" firstAttribute="top" secondItem="Zzp-51-H9l" secondAttribute="bottom" constant="45" id="nPZ-yJ-Zm3"/>
+                            <constraint firstItem="Zzp-51-H9l" firstAttribute="top" secondItem="LSj-h9-ybL" secondAttribute="bottom" constant="39" id="tWE-JT-EpS"/>
+                            <constraint firstItem="Pu6-h9-PEC" firstAttribute="top" secondItem="AOl-px-Lzs" secondAttribute="bottom" id="wgr-2U-oyT"/>
+                            <constraint firstItem="Pu6-h9-PEC" firstAttribute="leading" secondItem="LSj-h9-ybL" secondAttribute="leading" id="zrA-7x-dPn"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="Kdh-Be-Yx5"/>
-                            </mask>
-                        </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="Your Info" id="tTa-Ut-mkx"/>
+                    <navigationItem key="navigationItem" title="Your Info" id="2SF-2m-MJC"/>
                     <connections>
-                        <outlet property="datePicker" destination="LyG-va-4HK" id="W2o-vI-pJP"/>
-                        <outlet property="genderPicker" destination="nVg-Dw-cDc" id="xlu-dI-fW9"/>
+                        <outlet property="datePicker" destination="LSj-h9-ybL" id="US8-xJ-1BU"/>
+                        <outlet property="genderPicker" destination="Zzp-51-H9l" id="1Lh-t0-CCo"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vOD-Q4-gLC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-52" y="310"/>
+            <point key="canvasLocation" x="-16" y="302"/>
         </scene>
         <!--Life Expectancy-->
         <scene sceneID="Yc0-4v-mL7">
             <objects>
-                <viewController restorationIdentifier="DetailVC" storyboardIdentifier="DetailVC" id="5Ge-UI-PWt" customClass="TimeLeftDetailViewController" customModule="DieTime" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="DetailVC" storyboardIdentifier="DetailVC" id="5Ge-UI-PWt" customClass="TimeLeftDetailViewController" customModule="LifeExpectancy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="oeP-kB-WIs"/>
                         <viewControllerLayoutGuide type="bottom" id="3jw-kN-Y90"/>
@@ -265,7 +260,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qO6-tl-8Rm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="592" y="302"/>
+            <point key="canvasLocation" x="620" y="302"/>
         </scene>
     </scenes>
 </document>

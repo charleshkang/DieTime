@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:DieTime.xcodeproj">
+      location = "group:/Users/charleshyowonkang/Projects/personal-projects/DieTime/DieTime/LifeExpectancy.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
